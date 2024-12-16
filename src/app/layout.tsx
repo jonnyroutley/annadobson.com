@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Fraunces } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
-const fraunces = Fraunces({
-  variable: '--font-fraunces',
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
 })
 
@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.className} antialiased`}>{children}</body>
+      <body className={`${cormorantGaramond.className} antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }

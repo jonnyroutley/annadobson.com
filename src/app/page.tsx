@@ -1,43 +1,88 @@
+import { Oi } from 'next/font/google'
+
 // font-[family-name:var(--font-fraunces)]
+function ExternalLink({
+  href,
+  children,
+}: {
+  href: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="inline-flex flex-row gap-1 items-baseline">
+      <a
+        className="underline decoration-yellow-400 decoration-dotted hover:decoration-red-600 peer transition-colors ease-in-out duration-200"
+        href={href}
+      >
+        <>{children}</>
+      </a>
+      <span className="text-yellow-400">→</span>
+    </div>
+  )
+}
+
+const oi = Oi({
+  weight: ['400'],
+  subsets: ['latin'],
+})
+
+function Header() {
+  return (
+    <div className="absolute w-full px-4 py-2">
+      <div className="inline-flex flex-row items-baseline gap-1 w-full">
+        <p className="text-5xl font-bold">A</p>
+        <div className="rounded-full w-4 h-4 bg-red-600  shrink-0" />
+        <nav className="ml-4 w-full">
+          <ul className="flex flex-row gap-4 w-full justify-end">
+            <li>Selected works</li>
+            {/* <li>About</li> */}
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
-    <div className="bg-blue-700">
-      <main className="flex flex-col gap-8 items-center justify-center min-h-screen text-neutral-50 px-4">
-        <div className="flex flex-col items-center ">
-          <h1 className="text-[15rem] leading-none">
-            AN
-            <br />
-            NA
-          </h1>
-          <div className="flex flex-row gap-1 items-baseline">
-            <h2 className="text-5xl tracking-widest">Dobson</h2>
-            <div className="rounded-full w-4 h-4 bg-red-600" />
-          </div>
-        </div>
-        <ul className="flex flex-col gap-2 text-center">
-          <li>
-            Literary scout for{' '}
-            <a
-              className="underline decoration-yellow-400 decoration-dotted hover:decoration-red-600"
-              href="https://ecclesfisher.com/#team"
+    <div className="bg-[#1d16f0] text-xl font-semibold overflow-hidden">
+      {/* <Button /> */}
+      <Header />
+      <div className="relative">
+        <main className="flex flex-col gap-8 items-center justify-center text-neutral-50 h-screen w-full px-4 py-2">
+          <div className="h-16" />
+          <div className="flex flex-col items-center">
+            <div
+              className={`flex flex-row gap-1 items-baseline justify-center text-center w-fit`}
             >
-              Eccles Fisher Associates
-            </a>
-          </li>
-          <li>
-            Alumna of the University of Oxford and University College London
-          </li>
-          <li>
-            <a className="underline decoration-yellow-400 decoration-dotted hover:decoration-red-600 hover:cursor-pointer">
-              Selected works{' '}
-              <span className="text-yellow-400 hover:text-red-600">→</span>
-            </a>
-          </li>
-        </ul>
-      </main>
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"> */}
-
-      {/* </footer> */}
+              <h1
+                className={`${oi.className} text-[10rem] tracking-widest leading-[9rem] translate-x-2`}
+              >
+                AN
+                <br />
+                NA
+              </h1>
+              {/* <h1 className="text-3xl">Anna Dobson</h1> */}
+              {/* <div className="rounded-full w-2 h-2 bg-red-600  shrink-0" /> */}
+            </div>
+          </div>
+          <ul className="flex flex-col gap-2 text-center items-center z-10">
+            <li>
+              Literary scout for{' '}
+              <ExternalLink href="https://ecclesfisher.com/#team">
+                Eccles Fisher Associates
+              </ExternalLink>
+            </li>
+            <li>
+              Alumna of the University of Oxford and University College London
+            </li>
+            <li className="flex flex-row gap-1 items-baseline">
+              <ExternalLink href="">Selected works</ExternalLink>
+            </li>
+          </ul>
+        </main>
+      </div>
     </div>
   )
 }
