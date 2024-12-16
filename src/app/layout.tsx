@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cormorantGaramond.className} antialiased bg-[#1d16f0] text-xl font-semibold overflow-hidden`}
+        className={`${cormorantGaramond.className} antialiased bg-[#1d16f0] text-xl font-semibold overflow-hidden text-neutral-50`}
       >
         <Header />
         <div className="relative">{children}</div>

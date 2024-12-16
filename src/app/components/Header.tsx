@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { InternalLink } from './Links'
 
 export function Header() {
   return (
@@ -10,12 +11,13 @@ export function Header() {
         <div className="rounded-full w-4 h-4 bg-red-600  shrink-0" />
         <nav className="ml-4 w-full">
           <ul className="flex flex-row gap-4 w-full justify-end">
-            <li>Selected works</li>
-            {/* <li>About</li> */}
+            {/* <li>
+              <InternalLink href={'/works'}>Selected works</InternalLink>
+            </li> */}
             <li>
-              <a className="underline decoration-yellow-400 decoration-dotted hover:cursor-pointer">
+              <InternalLink href={'mailto:annadobson@outlook.com'}>
                 Contact
-              </a>
+              </InternalLink>
             </li>
           </ul>
         </nav>
