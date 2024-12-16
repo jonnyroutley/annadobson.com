@@ -16,7 +16,7 @@ function ExternalLink({
       >
         <>{children}</>
       </a>
-      <span className="text-yellow-400">→</span>
+      <span className="text-red-600">→</span>
     </div>
   )
 }
@@ -67,7 +67,7 @@ export default function Home() {
               {/* <div className="rounded-full w-2 h-2 bg-red-600  shrink-0" /> */}
             </div>
           </div>
-          <ul className="flex flex-col gap-2 text-center items-center z-10">
+          <ul className="flex flex-col gap-2 text-center items-center max-w-md z-10">
             <li>
               Literary scout for{' '}
               <ExternalLink href="https://ecclesfisher.com/#team">
