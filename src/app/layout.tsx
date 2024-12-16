@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
+import { Header } from './components/Header'
 
 const cormorantGaramond = Cormorant_Garamond({
   weight: ['400', '500', '600', '700'],
@@ -19,8 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorantGaramond.className} antialiased`}>
-        {children}
+      <body
+        className={`${cormorantGaramond.className} antialiased bg-[#1d16f0] text-xl font-semibold overflow-hidden`}
+      >
+        <Header />
+        <div className="relative">{children}</div>
       </body>
     </html>
   )
