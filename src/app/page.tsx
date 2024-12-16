@@ -1,5 +1,5 @@
 import { Oi } from 'next/font/google'
-import { ExternalLink } from './components/Links'
+import { ExternalLink, InternalLink } from './components/Links'
 
 const oi = Oi({
   weight: ['400'],
@@ -33,9 +33,11 @@ export default function Home() {
         <li>
           Alumna of the University of Oxford and University College London
         </li>
-        {/* <li className="flex flex-row gap-1 items-baseline">
-          <ExternalLink href="">Selected works</ExternalLink>
-        </li> */}
+        <li>
+          <InternalLink href={'mailto:annadobson@outlook.com'}>
+            Contact
+          </InternalLink>
+        </li>
       </ul>
     </main>
   )
