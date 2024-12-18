@@ -35,13 +35,13 @@ export function Card() {
       ref={cardRef}
       onMouseOver={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col gap-8 items-center rounded-sm justify-center md:max-w-lg border-2 px-12 py-24 sm:py-8 shadow-xl transition-transform duration-300 ease-out"
+      className="flex flex-col gap-8 items-center rounded-sm justify-center md:max-w-lg border-2 px-12 py-24 sm:py-8 shadow-xl transition-transform duration-300 ease-out "
       style={{
         transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
         transformStyle: 'preserve-3d',
       }}
     >
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center">
         <div
           className={`flex flex-col gap-2 items-baseline justify-center text-center w-fit`}
         >
@@ -55,7 +55,7 @@ export function Card() {
           </div>
         </div>
       </div>
-      <ul className="flex flex-col gap-2 text-center items-center max-w-md z-10">
+      <ul className="flex flex-col gap-2 text-center items-center max-w-md z-10 opacity-0 animate-fade-in">
         <li>
           Literary scout for{' '}
           <ExternalLink href="https://ecclesfisher.com/#team">
