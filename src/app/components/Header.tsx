@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { InternalLink } from './Links'
+import { RedDot } from './RedDot'
 
 export function Header() {
   return (
@@ -8,7 +9,8 @@ export function Header() {
         <Link className="text-5xl font-bold" href={'/'}>
           A
         </Link>
-        <div className="rounded-full w-4 h-4 bg-red-600  shrink-0" />
+        {/* <div className="rounded-full w-4 h-4 bg-red-600 shrink-0" /> */}
+        <RedDot />
         <nav className="ml-4 w-full">
           <ul className="flex flex-row gap-4 w-full justify-end">
             {/* <li>
