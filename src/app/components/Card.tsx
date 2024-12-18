@@ -35,7 +35,7 @@ export function Card() {
       ref={cardRef}
       onMouseOver={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col gap-8 items-center rounded-sm justify-center md:max-w-lg border-2 px-12 py-24 sm:py-8 shadow-xl transition-transform duration-300 ease-out "
+      className="flex flex-col gap-12 items-center rounded-sm justify-center md:max-w-lg border-2 px-12 py-24 sm:py-8 shadow-xl transition-transform duration-300 ease-out "
       style={{
         transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
         transformStyle: 'preserve-3d',
