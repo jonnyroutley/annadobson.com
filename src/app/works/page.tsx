@@ -28,19 +28,25 @@ const OrientationGradientBackground = () => {
     }
   }, [])
 
+  // Smooth interpolation function to prevent step changes
+  const smoothStep = (x: number) => {
+    // Smoothstep interpolation
+    return x * x * (3 - 2 * x)
+  }
+
   // Map orientation to gradient colors
   const getGradientColors = () => {
-    // Reduce the range of changes to make it more subtle
-    const normalizedBeta = ((orientation.beta + 180) / 360) * 0.2 + 0.9
-    const normalizedGamma = ((orientation.gamma + 90) / 180) * 0.2 + 0.9
+    // Normalize beta and gamma with smoothing
+    const normalizedBeta = smoothStep((orientation.beta + 180) / 360)
+    const normalizedGamma = smoothStep((orientation.gamma + 90) / 180)
 
-    // Base color #1d16f0 with subtle variations
+    // Base color #1d16f0 with smooth variations
     const baseColor = [29, 22, 240]
     const gradientColor1 = baseColor.map((c) =>
-      Math.min(255, Math.max(0, c * normalizedBeta))
+      Math.min(255, Math.max(0, c * (0.75 + normalizedBeta * 0.5)))
     )
     const gradientColor2 = baseColor.map((c) =>
-      Math.min(255, Math.max(0, c * normalizedGamma))
+      Math.min(255, Math.max(0, c * (0.75 + normalizedGamma * 0.5)))
     )
 
     return {

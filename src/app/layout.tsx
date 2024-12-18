@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cormorantGaramond.className} antialiased bg-[#1d16f0] text-xl font-semibold overflow-hidden text-neutral-50`}
+        className={`${cormorantGaramond.className} antialiased bg-gradient-to-b to-30%  from-[#1711c2] to-[#1d16f0]  text-lg font-semibold overflow-hidden`}
       >
         <Header />
         <div className="relative">{children}</div>
