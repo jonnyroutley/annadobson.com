@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "biome lint",
-    "format": "biome format"
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.1.0",

@@ -6,6 +6,7 @@ export function RedDot() {
   const [isVisible, setIsVisible] = useState(true);
 
   return (
+    // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       onClick={() => {
         setIsVisible(false);
