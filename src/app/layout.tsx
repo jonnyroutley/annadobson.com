@@ -1,22 +1,22 @@
-import type { Metadata } from 'next'
-import { Cormorant_Garamond } from 'next/font/google'
-import './globals.css'
-import { Header } from './components/Header'
+import type { Metadata } from "next";
+import { Cormorant_Garamond } from "next/font/google";
+import "./globals.css";
+import { Header } from "./components/Header";
 
 const cormorantGaramond = Cormorant_Garamond({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-})
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: 'Anna Dobson',
-  description: 'Anna Dobson',
-}
+  title: "Anna Dobson",
+  description: "Anna Dobson",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -27,5 +27,5 @@ export default function RootLayout({
         <div className="relative">{children}</div>
       </body>
     </html>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import { InternalLink } from './Links'
-import { RedDot } from './RedDot'
+import Link from "next/link";
+import { InternalLink } from "./Links";
+import { RedDot } from "./RedDot";
 
 export function Header() {
   return (
     <div className="absolute w-full px-4 py-2 z-10">
       <div className="inline-flex flex-row items-baseline gap-1 w-full">
-        <Link className="text-5xl font-bold" href={'/'}>
+        <Link className="text-5xl font-bold" href={"/"}>
           A
         </Link>
         {/* <div className="rounded-full w-4 h-4 bg-red-600 shrink-0" /> */}
@@ -17,7 +17,7 @@ export function Header() {
               <InternalLink href={'/works'}>Selected works</InternalLink>
             </li> */}
             <li>
-              <InternalLink href={'mailto:annadobson@outlook.com'}>
+              <InternalLink href={"mailto:annadobson@outlook.com"}>
                 Contact
               </InternalLink>
             </li>
@@ -25,5 +25,5 @@ export function Header() {
         </nav>
       </div>
     </div>
-  )
+  );
 }

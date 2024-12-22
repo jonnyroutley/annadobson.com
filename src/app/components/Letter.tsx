@@ -1,9 +1,9 @@
-import { Oi } from 'next/font/google'
+import { Oi } from "next/font/google";
 
 const oi = Oi({
-  weight: '400',
-  subsets: ['latin'],
-})
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export function BigLetter({ letter }: { letter: string }) {
   return (
@@ -14,5 +14,5 @@ export function BigLetter({ letter }: { letter: string }) {
         <p className="translate-y-[0.9rem]">{letter}</p>
       </div>
     </div>
-  )
+  );
 }
