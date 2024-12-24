@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { FlipCard, TiltCard } from "./components/Card";
+import { EmailLink } from "./components/EmailLink";
 import { BigLetter } from "./components/Letter";
 import { ExternalLink, InternalLink } from "./components/Links";
-import { EmailLink } from "./components/EmailLink";
 
 function Front() {
   return (
