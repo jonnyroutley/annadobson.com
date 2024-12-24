@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FlipCard, TiltCard } from "./components/Card";
 import { BigLetter } from "./components/Letter";
 import { ExternalLink, InternalLink } from "./components/Links";
+import { EmailLink } from "./components/EmailLink";
 
 function Front() {
   return (
@@ -26,9 +27,7 @@ function Front() {
         <li className="text-2xl">Anna Dobson</li>
         <li className="italic">Literary Scout</li>
         <li>
-          <a className="" href="mailto:contact@annadobs.com">
-            contact@annadobson.com
-          </a>
+          <EmailLink />
         </li>
       </ul>
       <span className="text-red-600 animate-pulse text-3xl">→</span>

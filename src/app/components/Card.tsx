@@ -85,11 +85,11 @@ export const FlipCard = ({
           onClick={() => setIsFlipped(!isFlipped)}
         >
           {/* Front of card */}
-          <div className="backface-hidden absolute h-full w-full transition-transform duration-300 ease-out">
+          <div className="z-10 backface-hidden absolute h-full w-full transition-transform duration-300 ease-out">
             {front}
           </div>
           {/* Back of card */}
-          <div className="backface-hidden rotate-y-180 absolute h-full w-full transition-transform duration-300 ease-out ">
+          <div className="z-10 backface-hidden rotate-y-180 absolute h-full w-full transition-transform duration-300 ease-out ">
             {back}
           </div>
         </div>
