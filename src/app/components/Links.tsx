@@ -28,13 +28,11 @@ export function InternalLink({
   children: React.ReactNode;
 }) {
   return (
-    <div className="inline-flex flex-row gap-1 items-baseline">
-      <Link
-        href={href}
-        className="underline underline-offset-4 decoration-yellow-400  hover:decoration-red-600 peer transition-colors ease-in-out duration-200"
-      >
-        {children}
-      </Link>
-    </div>
+    <Link
+      href={href}
+      className="inline-flex flex-row gap-1 items-baseline underline underline-offset-4 decoration-yellow-400  hover:decoration-red-600 peer transition-colors ease-in-out duration-200"
+    >
+      {children}
+    </Link>
   );
 }

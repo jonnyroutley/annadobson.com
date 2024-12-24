@@ -17,7 +17,7 @@ export function Header() {
               <InternalLink href={'/works'}>Selected works</InternalLink>
             </li> */}
             <li>
-              <InternalLink href={"mailto:annadobson@outlook.com"}>
+              <InternalLink href={"mailto:contact@annadobson.com"}>
                 Contact
               </InternalLink>
             </li>
