@@ -23,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${cormorantGaramond.className} antialiased bg-gradient-to-b to-30%  from-[#1711c2] to-[#1d16f0] text-neutral-50 text-lg font-semibold overflow-hidden`}
       >
+        <img src="/blue.png" alt="unfurl" className="hidden" />
         <Header />
         <div className="relative">{children}</div>
       </body>
