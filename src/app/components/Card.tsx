@@ -46,20 +46,33 @@ export function TiltCard({ children }: { children?: React.ReactNode }) {
 }
 
 const styles = `
-  /* Custom styles for 3D transforms */
-  .perspective-1000 {
+  .flip-card-container {
     perspective: 1000px;
   }
-  
-  .transform-style-preserve-3d {
+
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
     transform-style: preserve-3d;
   }
-  
-  .backface-hidden {
-    backface-visibility: hidden;
-  }
-  
-  .rotate-y-180 {
+
+  .flip-card-back {
     transform: rotateY(180deg);
   }
 `;
@@ -76,22 +89,14 @@ export const FlipCard = ({
   return (
     <>
       <style>{styles}</style>
-      <div className="perspective-1000 h-[32rem] w-[20rem] md:w-[32rem] md:h-[24rem]">
+      <div className="flip-card-container h-[32rem] w-[20rem] md:w-[32rem] md:h-[24rem]">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div
-          className={`transform-style-preserve-3d relative h-full w-full cursor-pointer transition-transform duration-500 ${
-            isFlipped ? "rotate-y-180" : ""
-          }`}
+          className={`flip-card cursor-pointer ${isFlipped ? "flipped" : ""}`}
           onClick={() => setIsFlipped(!isFlipped)}
         >
-          {/* Front of card */}
-          <div className="z-10 backface-hidden absolute h-full w-full transition-transform duration-300 ease-out">
-            {front}
-          </div>
-          {/* Back of card */}
-          <div className="z-10 backface-hidden rotate-y-180 absolute h-full w-full transition-transform duration-300 ease-out ">
-            {back}
-          </div>
+          <div className="flip-card-front">{front}</div>
+          <div className="flip-card-back">{back}</div>
         </div>
       </div>
     </>

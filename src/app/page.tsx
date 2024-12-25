@@ -24,7 +24,9 @@ function Front() {
         </div>
       </div>
       <ul className="flex flex-col gap-1 text-center items-center max-w-md z-10 mt-1">
-        <li className="text-2xl">Anna Dobson</li>
+        <li className="text-2xl">
+          <h1>Anna Dobson</h1>
+        </li>
         <li className="italic">Literary Scout</li>
         <li>
           <EmailLink />
@@ -37,30 +39,31 @@ function Front() {
 
 function Back() {
   return (
-    <div className="flex flex-col gap-6 items-center rounded-sm justify-center border-2 border-yellow-300 shadow-xl h-full">
+    <div className="flex flex-col md:gap-6 gap-12 items-center rounded-sm justify-center border-2 border-yellow-300 shadow-xl h-full">
       <div className="flex flex-col items-center">
         <Image
           src="/profile.JPG"
           alt="Profile photo"
           width={150}
           height={150}
-          className="rounded-full h-28 w-28 object-cover"
+          className="rounded-full h-28 w-28 object-cover mt-6"
         />
       </div>
-      <div className="px-6 flex flex-col text-center gap-3">
-        <p>Hi, I'm Anna.</p>
+      <div className="px-6 flex flex-col gap-3 text-left md:text-center">
+        <h1>Hi, I'm Anna.</h1>
         <div>
-          I'm currently working as a literary scout for{" "}
+          Current literary scout for{" "}
           <ExternalLink href="https://ecclesfisher.com/#team">
             Eccles Fisher Associates.
           </ExternalLink>
         </div>
-        <p>
-          Previously, I studied{" "}
-          <span className="italic">Issues in Modern Culture</span> at University
-          College London and <span className="italic">French & Russian</span> at
-          the University of Oxford.
-        </p>
+        <div className="">
+          Previous student of{" "}
+          <span className="italic">Issues in Modern Culture</span> at{" "}
+          <ExternalLink href=""> University College London</ExternalLink>
+          and <span className="italic">French & Russian</span> at the{" "}
+          <ExternalLink href="">University of Oxford.</ExternalLink>
+        </div>
       </div>
     </div>
   );

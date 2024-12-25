@@ -8,15 +8,15 @@ export function ExternalLink({
   children: React.ReactNode;
 }) {
   return (
-    <div className="inline-flex flex-row gap-1 items-baseline z-50">
+    <span className="flex-row gap-1 items-baseline z-50">
       <a
-        className="underline decoration-yellow-400 underline-offset-4 hover:decoration-red-600 peer transition-colors ease-in-out duration-200"
+        className="underline decoration-yellow-400 underline-offset-4 hover:decoration-red-600 peer transition-colors ease-in-out duration-200 break-words"
         href={href}
       >
         {children}
       </a>
-      <span className="text-red-600">→</span>
-    </div>
+      <span className="text-red-600 ml-1 mr-2">→</span>
+    </span>
   );
 }
 
