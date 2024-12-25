@@ -23,6 +23,7 @@ export const metadata: Metadata = {
         alt: "Anna Dobson",
         width: 800,
         height: 500,
+        type: "image/png",
       },
     ],
   },
