@@ -11,10 +11,18 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Anna Dobson",
   description: "Anna Dobson",
+
   openGraph: {
+    title: "Anna Dobson",
+    description: "Anna Dobson",
+    type: "website",
+    siteName: "Anna Dobson",
     images: [
       {
-        url: "/blue.png",
+        url: "https://www.annadobson.com/blue.png",
+        alt: "Anna Dobson",
+        width: 800,
+        height: 500,
       },
     ],
   },
