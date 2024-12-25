@@ -60,9 +60,9 @@ function Back() {
         <div className="">
           Previous student of{" "}
           <span className="italic">Issues in Modern Culture</span> at{" "}
-          <ExternalLink href=""> University College London</ExternalLink>
+          <ExternalLink href="https://www.ucl.ac.uk/"> University College London</ExternalLink>
           and <span className="italic">French & Russian</span> at the{" "}
-          <ExternalLink href="">University of Oxford.</ExternalLink>
+          <ExternalLink href="https://www.ox.ac.uk/">University of Oxford.</ExternalLink>
         </div>
       </div>
     </div>
